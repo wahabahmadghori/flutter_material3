@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_demo/presentation_layer/dashboard/dashboard_view.dart';
 import 'package:flutter_demo/presentation_layer/home/home_view.dart';
 
-import 'presentation_layer/home/home_cubit.dart';
+import 'presentation_layer/dashboard/dashboard_cubit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: BlocProvider(
-        create: (context) => HomeCubit(),
+        create: (context) => DashboardCubit(),
         child: const HomeView(),
       ),
     );
